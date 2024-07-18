@@ -18,3 +18,6 @@ You can choose difficult or restart game.
 - Game audio
 - Difficulty
 - Score
+
+Try:
+https://milia20.github.io/space-invaders-js/
