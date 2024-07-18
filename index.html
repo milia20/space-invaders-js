@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Invaders</title>
+    <link rel="shortcut icon" href="#" />
+    <style>
+      canvas {
+        box-shadow: black 20px 10px 50px;
+      }
+      h1 {
+        margin: 0px;
+        margin-bottom: 10px;
+        font-size: 2.9em;
+        font-family: "Helvetica";
+      }
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        height: 100vh;
+        background: linear-gradient(0deg, rgb(97, 98, 99) 0%, rgba(0, 0, 0, 0) 100%);
+      }
+      #controlButtons {
+        position: relative;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        top: -200px;
+        z-index: 10;
+        /*background: linear-gradient(0deg, rgb(97, 98, 99) 0%, rgba(0, 0, 0, 0) 100%);*/
+      }
+      button {
+        width: 100px;
+        height: 50px;
+        border: none;
+      }
+      .difficulty button {
+        margin: 10px;
+        color: azure;
+        border-radius: 10px;
+        background: linear-gradient(0deg, rgb(29, 31, 32) 0%, rgba(0, 0, 0, 0) 100%);
+      }
+      .restart-button {
+        width: 60px;
+        height: 60px;
+        padding-top: 5px;
+        background: none;
+        border-radius: 100%;
+      }
+
+      #controlButtons button:hover {
+        background-color: rgb(74, 80, 83);
+      }
+
+      .restart-picture {
+        max-height: 88%;
+        max-width: 88%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Space Invaders</h1>
+    <game>
+      <canvas id="game"></canvas>
+      <div id="controlButtons">
+        <button id="restart" class="restart-button">
+          <img class="restart-picture" src="images/refresh_white.png" />
+        </button>
+        <div class="difficulty">
+          <button id="easy">Easy</button>
+          <button id="medium">Medium</button>
+          <button id="hard">Hard</button>
+        </div>
+      </div>
+    </game>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
